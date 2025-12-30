@@ -11,9 +11,13 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
-#include <QtWidgets/QStatusBar>
+#include <QtWidgets/QPlainTextEdit>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -22,8 +26,13 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QMenuBar *menubar;
-    QStatusBar *statusbar;
+    QGridLayout *gridLayout_2;
+    QGroupBox *groupBox;
+    QGridLayout *gridLayout;
+    QPlainTextEdit *plainTextEdit;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *StartAndStopBtn;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -32,14 +41,35 @@ public:
         MainWindow->resize(800, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
+        gridLayout_2 = new QGridLayout(centralwidget);
+        gridLayout_2->setObjectName("gridLayout_2");
+        groupBox = new QGroupBox(centralwidget);
+        groupBox->setObjectName("groupBox");
+        gridLayout = new QGridLayout(groupBox);
+        gridLayout->setObjectName("gridLayout");
+        plainTextEdit = new QPlainTextEdit(groupBox);
+        plainTextEdit->setObjectName("plainTextEdit");
+
+        gridLayout->addWidget(plainTextEdit, 0, 0, 1, 1);
+
+
+        gridLayout_2->addWidget(groupBox, 0, 0, 1, 1);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName("horizontalLayout");
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+        StartAndStopBtn = new QPushButton(centralwidget);
+        StartAndStopBtn->setObjectName("StartAndStopBtn");
+
+        horizontalLayout->addWidget(StartAndStopBtn);
+
+
+        gridLayout_2->addLayout(horizontalLayout, 1, 0, 1, 1);
+
         MainWindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 800, 25));
-        MainWindow->setMenuBar(menubar);
-        statusbar = new QStatusBar(MainWindow);
-        statusbar->setObjectName("statusbar");
-        MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
 
@@ -49,6 +79,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("MainWindow", "\346\227\240\346\236\201\345\223\245\350\201\212\345\244\251\345\256\244\346\234\215\345\212\241\345\231\250\346\227\245\345\277\227", nullptr));
+        StartAndStopBtn->setText(QCoreApplication::translate("MainWindow", "\345\220\257\345\212\250\346\234\215\345\212\241\345\231\250", nullptr));
     } // retranslateUi
 
 };

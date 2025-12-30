@@ -145,7 +145,7 @@ public:
         gridLayout_6->setObjectName("gridLayout_6");
         verticalLayout_7 = new QVBoxLayout();
         verticalLayout_7->setObjectName("verticalLayout_7");
-        verticalSpacer_4 = new QSpacerItem(19, 88, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+        verticalSpacer_4 = new QSpacerItem(19, 124, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
         verticalLayout_7->addItem(verticalSpacer_4);
 
@@ -161,11 +161,14 @@ public:
         verticalLayout_6->setObjectName("verticalLayout_6");
         label_4 = new QLabel(chatPage_2);
         label_4->setObjectName("label_4");
-        QSizePolicy sizePolicy(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(label_4->sizePolicy().hasHeightForWidth());
         label_4->setSizePolicy(sizePolicy);
+        QFont font1;
+        font1.setPointSize(12);
+        label_4->setFont(font1);
         label_4->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));"));
         label_4->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
@@ -175,6 +178,9 @@ public:
         label_5->setObjectName("label_5");
         sizePolicy.setHeightForWidth(label_5->sizePolicy().hasHeightForWidth());
         label_5->setSizePolicy(sizePolicy);
+        QFont font2;
+        font2.setPointSize(13);
+        label_5->setFont(font2);
         label_5->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));"));
         label_5->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
 
