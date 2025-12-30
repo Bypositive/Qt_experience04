@@ -309,6 +309,7 @@ Makefile: ../../../ChatRoomService/ChatRoomService.pro D:/Qt6/6.9.2/mingw_64/mks
 		../../../ChatRoomService/ChatRoomService.pro \
 		D:/Qt6/6.9.2/mingw_64/lib/Qt6Widgets.prl \
 		D:/Qt6/6.9.2/mingw_64/lib/Qt6Gui.prl \
+		D:/Qt6/6.9.2/mingw_64/lib/Qt6Network.prl \
 		D:/Qt6/6.9.2/mingw_64/lib/Qt6Core.prl \
 		D:/Qt6/6.9.2/mingw_64/lib/Qt6EntryPoint.prl \
 		D:/Qt6/6.9.2/mingw_64/mkspecs/features/build_pass.prf
@@ -552,6 +553,7 @@ D:/Qt6/6.9.2/mingw_64/mkspecs/features/lex.prf:
 ../../../ChatRoomService/ChatRoomService.pro:
 D:/Qt6/6.9.2/mingw_64/lib/Qt6Widgets.prl:
 D:/Qt6/6.9.2/mingw_64/lib/Qt6Gui.prl:
+D:/Qt6/6.9.2/mingw_64/lib/Qt6Network.prl:
 D:/Qt6/6.9.2/mingw_64/lib/Qt6Core.prl:
 D:/Qt6/6.9.2/mingw_64/lib/Qt6EntryPoint.prl:
 D:/Qt6/6.9.2/mingw_64/mkspecs/features/build_pass.prf:
