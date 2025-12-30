@@ -33,17 +33,17 @@ public:
     QGridLayout *gridLayout;
     QLabel *label;
     QStackedWidget *stackedWidget;
-    QWidget *loginPage_2;
+    QWidget *chatPage_2;
     QGridLayout *gridLayout_5;
     QVBoxLayout *verticalLayout_5;
     QHBoxLayout *horizontalLayout_6;
-    QTextEdit *textEdit_2;
-    QListWidget *listWidget_2;
+    QTextEdit *roomTextEdit;
+    QListWidget *userList;
     QHBoxLayout *horizontalLayout_7;
-    QLineEdit *lineEdit_2;
-    QPushButton *sayBtn_2;
+    QLineEdit *content;
+    QPushButton *send;
     QPushButton *logoutBtn_2;
-    QWidget *chatPage_2;
+    QWidget *loginPage_2;
     QGridLayout *gridLayout_6;
     QVBoxLayout *verticalLayout_7;
     QSpacerItem *verticalSpacer_4;
@@ -87,45 +87,45 @@ public:
 
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName("stackedWidget");
-        loginPage_2 = new QWidget();
-        loginPage_2->setObjectName("loginPage_2");
-        gridLayout_5 = new QGridLayout(loginPage_2);
+        chatPage_2 = new QWidget();
+        chatPage_2->setObjectName("chatPage_2");
+        gridLayout_5 = new QGridLayout(chatPage_2);
         gridLayout_5->setObjectName("gridLayout_5");
         verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setObjectName("verticalLayout_5");
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setObjectName("horizontalLayout_6");
-        textEdit_2 = new QTextEdit(loginPage_2);
-        textEdit_2->setObjectName("textEdit_2");
-        textEdit_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        roomTextEdit = new QTextEdit(chatPage_2);
+        roomTextEdit->setObjectName("roomTextEdit");
+        roomTextEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        horizontalLayout_6->addWidget(textEdit_2);
+        horizontalLayout_6->addWidget(roomTextEdit);
 
-        listWidget_2 = new QListWidget(loginPage_2);
-        listWidget_2->setObjectName("listWidget_2");
-        listWidget_2->setMaximumSize(QSize(120, 16777215));
-        listWidget_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        userList = new QListWidget(chatPage_2);
+        userList->setObjectName("userList");
+        userList->setMaximumSize(QSize(120, 16777215));
+        userList->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        horizontalLayout_6->addWidget(listWidget_2);
+        horizontalLayout_6->addWidget(userList);
 
 
         verticalLayout_5->addLayout(horizontalLayout_6);
 
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setObjectName("horizontalLayout_7");
-        lineEdit_2 = new QLineEdit(loginPage_2);
-        lineEdit_2->setObjectName("lineEdit_2");
-        lineEdit_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        content = new QLineEdit(chatPage_2);
+        content->setObjectName("content");
+        content->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        horizontalLayout_7->addWidget(lineEdit_2);
+        horizontalLayout_7->addWidget(content);
 
-        sayBtn_2 = new QPushButton(loginPage_2);
-        sayBtn_2->setObjectName("sayBtn_2");
-        sayBtn_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        send = new QPushButton(chatPage_2);
+        send->setObjectName("send");
+        send->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        horizontalLayout_7->addWidget(sayBtn_2);
+        horizontalLayout_7->addWidget(send);
 
-        logoutBtn_2 = new QPushButton(loginPage_2);
+        logoutBtn_2 = new QPushButton(chatPage_2);
         logoutBtn_2->setObjectName("logoutBtn_2");
         logoutBtn_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 ""));
@@ -138,10 +138,10 @@ public:
 
         gridLayout_5->addLayout(verticalLayout_5, 0, 0, 1, 1);
 
-        stackedWidget->addWidget(loginPage_2);
-        chatPage_2 = new QWidget();
-        chatPage_2->setObjectName("chatPage_2");
-        gridLayout_6 = new QGridLayout(chatPage_2);
+        stackedWidget->addWidget(chatPage_2);
+        loginPage_2 = new QWidget();
+        loginPage_2->setObjectName("loginPage_2");
+        gridLayout_6 = new QGridLayout(loginPage_2);
         gridLayout_6->setObjectName("gridLayout_6");
         verticalLayout_7 = new QVBoxLayout();
         verticalLayout_7->setObjectName("verticalLayout_7");
@@ -159,7 +159,7 @@ public:
         horizontalLayout_8->setObjectName("horizontalLayout_8");
         verticalLayout_6 = new QVBoxLayout();
         verticalLayout_6->setObjectName("verticalLayout_6");
-        label_4 = new QLabel(chatPage_2);
+        label_4 = new QLabel(loginPage_2);
         label_4->setObjectName("label_4");
         QSizePolicy sizePolicy(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
         sizePolicy.setHorizontalStretch(0);
@@ -174,7 +174,7 @@ public:
 
         verticalLayout_6->addWidget(label_4);
 
-        label_5 = new QLabel(chatPage_2);
+        label_5 = new QLabel(loginPage_2);
         label_5->setObjectName("label_5");
         sizePolicy.setHeightForWidth(label_5->sizePolicy().hasHeightForWidth());
         label_5->setSizePolicy(sizePolicy);
@@ -191,7 +191,7 @@ public:
 
         verticalLayout_8 = new QVBoxLayout();
         verticalLayout_8->setObjectName("verticalLayout_8");
-        serviceEdit_2 = new QLineEdit(chatPage_2);
+        serviceEdit_2 = new QLineEdit(loginPage_2);
         serviceEdit_2->setObjectName("serviceEdit_2");
         sizePolicy.setHeightForWidth(serviceEdit_2->sizePolicy().hasHeightForWidth());
         serviceEdit_2->setSizePolicy(sizePolicy);
@@ -199,7 +199,7 @@ public:
 
         verticalLayout_8->addWidget(serviceEdit_2);
 
-        nameEdit_2 = new QLineEdit(chatPage_2);
+        nameEdit_2 = new QLineEdit(loginPage_2);
         nameEdit_2->setObjectName("nameEdit_2");
         sizePolicy.setHeightForWidth(nameEdit_2->sizePolicy().hasHeightForWidth());
         nameEdit_2->setSizePolicy(sizePolicy);
@@ -230,7 +230,7 @@ public:
 
         horizontalLayout_10->addItem(horizontalSpacer_9);
 
-        loginBtn_2 = new QPushButton(chatPage_2);
+        loginBtn_2 = new QPushButton(loginPage_2);
         loginBtn_2->setObjectName("loginBtn_2");
         loginBtn_2->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));"));
 
@@ -254,7 +254,7 @@ public:
 
         gridLayout_6->addLayout(verticalLayout_7, 0, 0, 1, 1);
 
-        stackedWidget->addWidget(chatPage_2);
+        stackedWidget->addWidget(loginPage_2);
 
         gridLayout->addWidget(stackedWidget, 1, 0, 1, 1);
 
@@ -272,7 +272,7 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "\346\227\240\346\236\201\345\223\245\347\225\205\350\260\210\350\201\212\345\244\251\345\256\244", nullptr));
-        sayBtn_2->setText(QCoreApplication::translate("MainWindow", "\345\217\221\351\200\201", nullptr));
+        send->setText(QCoreApplication::translate("MainWindow", "\345\217\221\351\200\201", nullptr));
         logoutBtn_2->setText(QCoreApplication::translate("MainWindow", "\351\200\200\345\207\272", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "\346\234\215\345\212\241\345\231\250\345\234\260\345\235\200\357\274\232", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "\346\230\265\347\247\260\357\274\232", nullptr));

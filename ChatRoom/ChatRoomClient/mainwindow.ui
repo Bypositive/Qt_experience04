@@ -39,21 +39,21 @@
       <property name="currentIndex">
        <number>1</number>
       </property>
-      <widget class="QWidget" name="loginPage_2">
+      <widget class="QWidget" name="chatPage_2">
        <layout class="QGridLayout" name="gridLayout_5">
         <item row="0" column="0">
          <layout class="QVBoxLayout" name="verticalLayout_5">
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_6">
             <item>
-             <widget class="QTextEdit" name="textEdit_2">
+             <widget class="QTextEdit" name="roomTextEdit">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QListWidget" name="listWidget_2">
+             <widget class="QListWidget" name="userList">
               <property name="maximumSize">
                <size>
                 <width>120</width>
@@ -70,14 +70,14 @@
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_7">
             <item>
-             <widget class="QLineEdit" name="lineEdit_2">
+             <widget class="QLineEdit" name="content">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="sayBtn_2">
+             <widget class="QPushButton" name="send">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
@@ -103,7 +103,7 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="chatPage_2">
+      <widget class="QWidget" name="loginPage_2">
        <layout class="QGridLayout" name="gridLayout_6">
         <item row="0" column="0">
          <layout class="QVBoxLayout" name="verticalLayout_7">

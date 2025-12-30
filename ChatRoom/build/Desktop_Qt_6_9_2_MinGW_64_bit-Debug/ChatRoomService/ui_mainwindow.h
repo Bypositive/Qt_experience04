@@ -17,6 +17,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollBar>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QWidget>
 
@@ -29,7 +30,8 @@ public:
     QGridLayout *gridLayout_2;
     QGroupBox *groupBox;
     QGridLayout *gridLayout;
-    QPlainTextEdit *plainTextEdit;
+    QPlainTextEdit *logEdit;
+    QScrollBar *verticalScrollBar;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QPushButton *StartAndStopBtn;
@@ -39,6 +41,7 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
         MainWindow->resize(800, 600);
+        MainWindow->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(233, 237, 162, 255), stop:0.549811 rgba(235, 204, 106, 255), stop:1 rgba(255, 180, 94, 255));"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         gridLayout_2 = new QGridLayout(centralwidget);
@@ -47,10 +50,17 @@ public:
         groupBox->setObjectName("groupBox");
         gridLayout = new QGridLayout(groupBox);
         gridLayout->setObjectName("gridLayout");
-        plainTextEdit = new QPlainTextEdit(groupBox);
-        plainTextEdit->setObjectName("plainTextEdit");
+        logEdit = new QPlainTextEdit(groupBox);
+        logEdit->setObjectName("logEdit");
+        logEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
-        gridLayout->addWidget(plainTextEdit, 0, 0, 1, 1);
+        gridLayout->addWidget(logEdit, 0, 0, 1, 1);
+
+        verticalScrollBar = new QScrollBar(groupBox);
+        verticalScrollBar->setObjectName("verticalScrollBar");
+        verticalScrollBar->setOrientation(Qt::Orientation::Vertical);
+
+        gridLayout->addWidget(verticalScrollBar, 0, 2, 1, 1);
 
 
         gridLayout_2->addWidget(groupBox, 0, 0, 1, 1);
@@ -63,6 +73,7 @@ public:
 
         StartAndStopBtn = new QPushButton(centralwidget);
         StartAndStopBtn->setObjectName("StartAndStopBtn");
+        StartAndStopBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         horizontalLayout->addWidget(StartAndStopBtn);
 
