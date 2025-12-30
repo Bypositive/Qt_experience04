@@ -46,9 +46,9 @@ template <> constexpr inline auto ServerWorker::qt_create_metaobjectdata<qt_meta
         "jsonDoc",
         "disconnectedFromClient",
         "onReadyRead",
+        "disconnectFromClient",
         "sendJson",
-        "json",
-        "disconnectFromClient"
+        "json"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -64,12 +64,12 @@ template <> constexpr inline auto ServerWorker::qt_create_metaobjectdata<qt_meta
         QtMocHelpers::SignalData<void()>(6, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'onReadyRead'
         QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'sendJson'
-        QtMocHelpers::SlotData<void(const QJsonObject &)>(8, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QJsonObject, 9 },
-        }}),
         // Slot 'disconnectFromClient'
-        QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'sendJson'
+        QtMocHelpers::SlotData<void(const QJsonObject &)>(9, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QJsonObject, 10 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -97,8 +97,8 @@ void ServerWorker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         case 1: _t->jsonReceived((*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[1]))); break;
         case 2: _t->disconnectedFromClient(); break;
         case 3: _t->onReadyRead(); break;
-        case 4: _t->sendJson((*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[1]))); break;
-        case 5: _t->disconnectFromClient(); break;
+        case 4: _t->disconnectFromClient(); break;
+        case 5: _t->sendJson((*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[1]))); break;
         default: ;
         }
     }

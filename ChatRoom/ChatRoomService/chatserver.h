@@ -3,6 +3,8 @@
 
 #include <QObject>
 #include <QTcpServer>
+#include <QDateTime>
+#include <QCoreApplication>  // 添加这行
 #include "serverworker.h"
 
 class ChatServer : public QTcpServer
@@ -26,6 +28,8 @@ public slots:
 
 private:
     void broadcast(const QJsonObject &message, ServerWorker *exclude = nullptr);
+    void logClientAction(const QString &action, const QString &userName,
+                         const QString &content = "", ServerWorker *sender = nullptr);
 };
 
 #endif // CHATSERVER_H

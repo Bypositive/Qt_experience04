@@ -14,6 +14,10 @@ public:
     virtual bool setSocketDescriptor(qintptr socketDescriptor);
     QString getUserName() const { return userName; }
     void setUserName(const QString &name) { userName = name; }
+    QTcpSocket* getSocket() const { return m_serverSocket; }
+
+    // 添加一个公共方法来断开连接
+    void disconnectClient();
 
 signals:
     void logMessage(const QString &msg);
@@ -22,6 +26,7 @@ signals:
 
 private slots:
     void onReadyRead();
+    void disconnectFromClient();
 
 private:
     QTcpSocket *m_serverSocket;
@@ -29,7 +34,6 @@ private:
 
 public slots:
     void sendJson(const QJsonObject &json);
-    void disconnectFromClient();
 };
 
 #endif // SERVERWORKER_H

@@ -31,9 +31,11 @@ void ServerWorker::onReadyRead()
             if (parseError.error == QJsonParseError::NoError) {
                 if (jsonDoc.isObject()) {
                     emit jsonReceived(jsonDoc.object());
+                } else {
+                    emit logMessage("收到非JSON对象数据");
                 }
             } else {
-                emit logMessage("收到无效消息: " + QString::fromUtf8(jsonData));
+                emit logMessage(QString("JSON解析错误: %1").arg(parseError.errorString()));
             }
         } else {
             break;
@@ -41,9 +43,17 @@ void ServerWorker::onReadyRead()
     }
 }
 
+// 公共方法断开连接
+void ServerWorker::disconnectClient()
+{
+    if (m_serverSocket && m_serverSocket->state() == QAbstractSocket::ConnectedState) {
+        m_serverSocket->disconnectFromHost();
+    }
+}
+
+// 私有槽函数，当socket断开时调用
 void ServerWorker::disconnectFromClient()
 {
-    m_serverSocket->deleteLater();
     emit disconnectedFromClient();
 }
 
