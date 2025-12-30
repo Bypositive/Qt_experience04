@@ -89,7 +89,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "\346\234\215\345\212\241\345\231\250\347\253\257", nullptr));
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "\346\227\240\346\236\201\345\223\245\350\201\212\345\244\251\345\256\244\346\234\215\345\212\241\345\231\250\346\227\245\345\277\227", nullptr));
         StartAndStopBtn->setText(QCoreApplication::translate("MainWindow", "\345\220\257\345\212\250\346\234\215\345\212\241\345\231\250", nullptr));
     } // retranslateUi

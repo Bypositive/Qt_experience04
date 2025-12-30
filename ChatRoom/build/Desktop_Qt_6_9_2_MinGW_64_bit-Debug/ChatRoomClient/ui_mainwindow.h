@@ -270,7 +270,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "\346\227\240\346\236\201\345\223\245\347\225\205\350\260\210\350\201\212\345\244\251\345\256\244", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "\346\227\240\346\236\201\345\223\245\347\225\205\350\260\210\350\201\212\345\244\251\345\256\244", nullptr));
         send->setText(QCoreApplication::translate("MainWindow", "\345\217\221\351\200\201", nullptr));
         logoutBtn_2->setText(QCoreApplication::translate("MainWindow", "\351\200\200\345\207\272", nullptr));
