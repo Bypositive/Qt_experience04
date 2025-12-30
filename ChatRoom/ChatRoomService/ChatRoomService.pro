@@ -12,12 +12,12 @@ SOURCES += \
     chatserver.cpp \
     main.cpp \
     mainwindow.cpp \
-    serverwoker.cpp
+    serverworker.cpp
 
 HEADERS += \
     chatserver.h \
     mainwindow.h \
-    serverwoker.h
+    serverworker.h
 
 FORMS += \
     mainwindow.ui

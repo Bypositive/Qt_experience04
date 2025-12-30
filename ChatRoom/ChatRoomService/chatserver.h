@@ -3,7 +3,7 @@
 
 #include <QObject>
 #include <QTcpServer>
-#include "serverwoker.h"
+#include "serverworker.h"
 
 class ChatServer : public QTcpServer
 {

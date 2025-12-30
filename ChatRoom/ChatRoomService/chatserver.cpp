@@ -1,5 +1,5 @@
 #include "chatserver.h"
-#include "serverwoker.h"
+#include "serverworker.h"
 
 ChatServer::ChatServer(QObject *parent):
     QTcpServer(parent)

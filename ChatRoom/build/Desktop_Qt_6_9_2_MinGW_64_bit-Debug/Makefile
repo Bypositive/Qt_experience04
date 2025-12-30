@@ -301,6 +301,7 @@ Makefile: ../../ChatRoom.pro D:/Qt6/6.9.2/mingw_64/mkspecs/win32-g++/qmake.conf 
 		D:/Qt6/6.9.2/mingw_64/mkspecs/features/qt_config.prf \
 		D:/Qt6/6.9.2/mingw_64/mkspecs/win32-g++/qmake.conf \
 		D:/Qt6/6.9.2/mingw_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		D:/Qt6/6.9.2/mingw_64/mkspecs/features/exclusive_builds.prf \
 		D:/Qt6/6.9.2/mingw_64/mkspecs/features/toolchain.prf \
 		D:/Qt6/6.9.2/mingw_64/mkspecs/features/default_pre.prf \
@@ -531,6 +532,7 @@ D:/Qt6/6.9.2/mingw_64/mkspecs/features/qt_functions.prf:
 D:/Qt6/6.9.2/mingw_64/mkspecs/features/qt_config.prf:
 D:/Qt6/6.9.2/mingw_64/mkspecs/win32-g++/qmake.conf:
 D:/Qt6/6.9.2/mingw_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 D:/Qt6/6.9.2/mingw_64/mkspecs/features/exclusive_builds.prf:
 D:/Qt6/6.9.2/mingw_64/mkspecs/features/toolchain.prf:
 D:/Qt6/6.9.2/mingw_64/mkspecs/features/default_pre.prf:

@@ -1,5 +1,5 @@
-#ifndef SERVERWOKER_H
-#define SERVERWOKER_H
+#ifndef SERVERWORKER_H
+#define SERVERWORKER_H
 
 #include <QObject>
 #include <QTcpSocket>
@@ -23,4 +23,4 @@ public slots:
     void sendMessage(const QString &text,const QString &type = "message");
 };
 
-#endif // SERVERWOKER_H
+#endif // SERVERWORKER_H
