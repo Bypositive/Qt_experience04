@@ -10,18 +10,22 @@ class ChatServer : public QTcpServer
     Q_OBJECT
 public:
     explicit ChatServer(QObject *parent = nullptr);
+    void sendJson(ServerWorker *destination, const QJsonObject &message);
 
 protected:
     void incomingConnection(qintptr socketDescriptor) override;
-    QVector<ServerWoker*> m_clients;
+    QVector<ServerWorker*> m_clients;
 
 signals:
     void logMessage(const QString& msg);
 
 public slots:
     void stopServer();
+    void jsonReceived(ServerWorker *sender, const QJsonObject &json);
+    void userDisconnected(ServerWorker *sender);
 
-
+private:
+    void broadcast(const QJsonObject &message, ServerWorker *exclude = nullptr);
 };
 
 #endif // CHATSERVER_H
